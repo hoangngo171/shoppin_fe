@@ -16,7 +16,7 @@ export default function HomePage() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // Lấy link API từ file .env.local, nếu không thấy thì dùng mặc định localhost:8080
+    // Lấy link API từ file .env.local: NEXT_PUBLIC_API_URL=http://localhost:8080
     const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8080';
     
     fetch(`${apiUrl}/api/products`)
