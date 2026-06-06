@@ -7,11 +7,61 @@ export default function Navbar() {
       <div className="bg-purple-950 text-purple-100 text-xs py-2 px-4">
         <div className="container mx-auto flex justify-between items-center">
           <span>Chào mừng bạn đến với mẫu web của Shop Pin Siêu Cấp</span>
-          <div className="space-x-4">
-            <Link href="#" className="hover:underline">Tài khoản</Link>
-            <Link href="#" className="hover:underline">Thanh toán</Link>
-            <Link href="#" className="hover:underline">Cửa hàng</Link>
-          </div>
+          <div className="flex items-center gap-4">
+
+  {/* Dropdown Tài Khoản */}
+  <div className="relative group">
+
+  {/* Button tài khoản */}
+  <button className="hover:underline py-2">
+    Tài khoản ▾
+  </button>
+
+  {/* Dropdown */}
+  <div
+    className="
+      absolute right-0 top-full
+      w-56
+      bg-white
+      text-gray-700
+      rounded-md
+      shadow-lg
+      opacity-0
+      invisible
+      group-hover:opacity-100
+      group-hover:visible
+      transition-all
+      duration-200
+      z-50
+      border
+    "
+  >
+
+    <Link
+      href="/account/login"
+      className="block px-4 py-3 hover:bg-purple-100"
+    >
+      Đăng nhập
+    </Link>
+
+    <Link
+      href="/account/register"
+      className="block px-4 py-3 hover:bg-purple-100"
+    >
+      Đăng ký
+    </Link>
+  </div>
+</div>
+
+  <Link href="#" className="hover:underline">
+    Thanh toán
+  </Link>
+
+  <Link href="#" className="hover:underline">
+    Cửa hàng
+  </Link>
+
+</div>
         </div>
       </div>
 
@@ -27,7 +77,7 @@ export default function Navbar() {
           <input 
             type="text" 
             placeholder="Tìm kiếm sản phẩm..." 
-            className="w-full px-3 py-1.5 text-sm outline-none"
+            className="w-full px-3 py-1.5 text-sm outline-none placeholder-gray-400"
           />
           <button className="bg-purple-600 text-white px-4 hover:bg-purple-700 transition flex items-center justify-center">
             🔍
