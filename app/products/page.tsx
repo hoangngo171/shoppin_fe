@@ -1,6 +1,8 @@
+"use client";
 import styles from "./product.module.css";
-
+import { useCart } from "../context/CartContext";
 export default function ProductsPage() {
+  const { addToCart } = useCart();
   const products = [
     {
       id: 1,
@@ -46,7 +48,12 @@ export default function ProductsPage() {
               {product.price.toLocaleString()} VNĐ
             </p>
 
-            <button className={styles.button}>
+            <button
+              className={styles.button}
+              onClick={() =>
+                addToCart(product)
+              }
+            >
               Thêm vào giỏ
             </button>
           </div>

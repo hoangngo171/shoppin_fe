@@ -87,7 +87,8 @@ export default function Navbar() {
         {/* Menu Điều Hướng bên phải */}
         <nav className="flex items-center space-x-1 md:space-x-2 text-sm font-bold text-gray-700">
           <Link href="/" className="bg-purple-600 text-white px-4 py-2 rounded-md hover:bg-purple-700 transition">Trang chủ</Link>
-          <Link href="#" className="hover:bg-purple-50 p-2 rounded-md transition text-purple-900">Sản phẩm ▾</Link>
+          <Link href="/products" className="hover:bg-purple-50 p-2 rounded-md transition text-purple-900">Sản phẩm</Link>
+          <Link href="/cart" className="hover:bg-purple-50 p-2 rounded-md transition">Giỏ hàng</Link>
           <Link href="#" className="hover:bg-purple-50 p-2 rounded-md transition">Thanh toán</Link>
           <Link href="#" className="hover:bg-purple-50 p-2 rounded-md transition">Giới thiệu</Link>
           <Link href="#" className="hover:bg-purple-50 p-2 rounded-md transition">Liên hệ</Link>
