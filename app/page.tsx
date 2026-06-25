@@ -15,11 +15,11 @@ export default function HomePage() {
   const [products, setProducts] = useState<Product[]>([]);
   const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
+  /*useEffect(() => {
     // Lấy link API từ file .env.local: NEXT_PUBLIC_API_URL=http://localhost:8080
     const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8080';
     
-    fetch(`${apiUrl}/api/products`)
+    /*fetch(`${apiUrl}/api/products`)
       .then((res) => res.json())
       .then((data) => {
         setProducts(data);
@@ -29,7 +29,7 @@ export default function HomePage() {
         console.error("Lỗi kết nối API:", err);
         setLoading(false);
       });
-  }, []);
+  }, []);*/
 
   return (
     <div className="w-full bg-purple-50 min-h-screen pb-12">
